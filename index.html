@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="國立新化高工資訊科GDS-1102B 1.0.0 的隱私政策、資料處理說明與支援管道。">
+  <meta name="description" content="國立新化高工資訊科GDS-1102B 2.0.0 的隱私政策、本機 PNG 儲存說明與支援管道。">
   <title>國立新化高工資訊科GDS-1102B</title>
   <style>
     :root { color-scheme: light; font-family: system-ui, -apple-system, "Segoe UI", "Microsoft JhengHei", sans-serif; color: #203047; background: #f3f6fb; }
@@ -41,7 +41,7 @@
       <p class="eyebrow">國立新化高工資訊科</p>
       <h1>國立新化高工資訊科GDS-1102B</h1>
       <p class="subtitle">隱私政策與支援</p>
-      <p class="metadata"><span>適用版本：1.0.0</span><span>政策更新日期：<time datetime="2026-10-18">2026-10-18</time></span></p>
+      <p class="metadata"><span>適用版本：2.0.0</span><span>政策更新日期：<time datetime="2026-10-19">2026-10-19</time></span></p>
       <nav aria-label="頁面導覽">
         <a href="#privacy">隱私政策</a>
         <a href="#support">支援與聯絡</a>
@@ -58,14 +58,15 @@
         <h3>本機資料處理</h3>
         <p>使用 USB 實機模式時，程式會列出本機可用的序列埠名稱。只有使用者明確選取並連線的埠會被開啟；程式先查詢儀器識別，確認為 GDS-1102B 後才進行後續讀取或控制。</p>
         <p>程式於本次工作階段處理儀器型號、序號、韌體版本、設定、擷取狀態、波形取樣、讀取時間及由波形計算的數值。這些資料用於本機顯示、操作回饋與錯誤診斷。離線模擬模式使用程式產生的合成資料，不讀取示波器。</p>
-        <p>目前版本沒有提供自動保存、檔案匯出或雲端同步儀器資料的功能。正常斷線或切換來源會清除目前顯示的來源資料；結束程式會結束本次工作階段。</p>
+        <p>使用者可按所選通道的「儲存波形圖 PNG」，由 Windows 儲存選擇器指定檔名與位置，再確認儲存。程式將該筆完整記錄繪製為 PNG 圖檔，內容包含通道波形、格線與刻度、頻率、最大值、含直流 RMS、USB 實機或離線模擬來源、記錄讀取時間，以及適用的單位核對說明。取消選擇會放棄此次儲存。</p>
+        <p>程式不會自動持續儲存、上傳或雲端同步儀器資料。正常斷線或切換來源會清除目前顯示的來源資料；結束程式會結束本次工作階段。使用者已儲存的 PNG 不隨斷線或結束程式刪除，後續保管、分享與刪除由使用者決定。</p>
 
         <h3>傳送、帳號與追蹤</h3>
         <p>本應用程式自訂功能不主動將上述儀器識別、設定、波形或計算數值傳送給開發單位或其他線上服務。程式未設使用者帳號、廣告、追蹤或自訂使用分析上傳功能；核心觀察與模擬功能可離線使用。</p>
         <p>這項說明限於本應用程式自行實作的資料流程。Windows、Microsoft Store、Microsoft 執行階段與系統診斷可能依各自條款、隱私聲明及裝置設定處理資料；本政策不代替這些服務或元件的說明，也不宣稱它們完全不會收集診斷資訊。</p>
 
         <h3>權限</h3>
-        <p>本程式以桌面應用程式方式執行，宣告 <code>runFullTrust</code> 以使用桌面 API 與 USB CDC／虛擬 COM 連線。自訂功能沒有要求相機、麥克風、位置、聯絡人或使用者檔案存取；套件依賴項目存在於安裝內容中，不代表程式會啟用其所有功能。</p>
+        <p>本程式以桌面應用程式方式執行，宣告 <code>runFullTrust</code> 以使用桌面 API 與 USB CDC／虛擬 COM 連線。PNG 儲存由使用者明確啟動，透過 Windows 儲存選擇器確認寫入位置；不為此功能掃描或批次讀取使用者文件。自訂功能沒有要求相機、麥克風、位置或聯絡人；套件依賴項目存在於安裝內容中，不代表程式會啟用其所有功能。</p>
 
         <h3>使用者提供的支援資料</h3>
         <p>目前程式未內建錯誤報告自動上傳。若使用者自行透過下列 GitHub Issues 支援管道提供截圖、錯誤訊息或測試資料，資料範圍由使用者提供的內容決定。Issues 是公開頁面，內容會由 GitHub 依其服務條款與隱私聲明儲存及提供；維護者僅依回覆支援與改善程式的目的處理。請勿張貼個人資訊、儀器序號或機密量測內容。</p>
@@ -73,7 +74,7 @@
 
       <section id="support" class="support" aria-labelledby="support-title">
         <h2 id="support-title">更新與聯絡</h2>
-        <p>如後續版本加入儀器資料保存、匯出、帳號、網路傳送或新的資料處理方式，將同步更新本政策及商店相關說明。</p>
+        <p>如後續版本改變儀器資料的保存或匯出方式，或加入帳號、網路傳送及其他新的資料處理方式，將同步更新本政策及商店相關說明。</p>
         <p>支援與隱私問題：<a href="https://github.com/chiangyih/gds1102b-privacy/issues">GDS-1102B 支援 Issues</a>。</p>
         <p>本政策公開來源：<a href="https://github.com/chiangyih/gds1102b-privacy">gds1102b-privacy</a>。</p>
       </section>
